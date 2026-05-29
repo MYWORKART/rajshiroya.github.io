@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Shiroya - PB Partner Insurance Advisor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+header{
+width:100%;
+background:#0d1b2a;
+padding:15px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-size:22px;
+font-weight:700;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+background:white;
+padding:5px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00b4d8;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:130px 8% 60px;
+background:linear-gradient(135deg,#0d1b2a,#1b263b,#415a77);
+color:white;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:55px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+color:#00d4ff;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+max-width:650px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 30px;
+background:#00b4d8;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#0096c7;
+}
+
+.btn2{
+background:white;
+color:#0d1b2a;
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+margin-top:30px;
+}
+
+.hero-image img{
+width:380px;
+max-width:100%;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#0d1b2a;
+font-weight:700;
+}
+
+.about{
+padding:100px 8%;
+background:white;
+}
+
+.about-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.about-text{
+max-width:700px;
+}
+
+.about-text h2{
+font-size:38px;
+margin-bottom:20px;
+color:#0d1b2a;
+}
+
+.about-text p{
+font-size:17px;
+line-height:1.9;
+color:#555;
+}
+
+.services{
+padding:100px 8%;
+background:#eef4fb;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px 25px;
+border-radius:25px;
+text-align:center;
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin:20px 0 15px;
+font-size:24px;
+color:#0d1b2a;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+}
+
+.icon{
+font-size:55px;
+}
+
+.why{
+padding:100px 8%;
+background:white;
+}
+
+.why-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-box{
+background:#0d1b2a;
+color:white;
+padding:35px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.why-box:hover{
+background:#00b4d8;
+transform:scale(1.03);
+}
+
+.why-box h3{
+margin-bottom:15px;
+font-size:22px;
+}
+
+.contact{
+padding:100px 8%;
+background:linear-gradient(135deg,#0d1b2a,#1b263b);
+color:white;
+text-align:center;
+}
+
+.contact h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin-bottom:35px;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:25px;
+font-size:15px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+@media(max-width:900px){
+
+.hero-text h1{
+font-size:40px;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+text-align:center;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="https://i.ibb.co/LhxRvNKk/pb-partners.webp">
+<span>PB Partner</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+<h1>Secure Your Future With <span>Raj Shiroya</span></h1>
+
+<p>
+Professional PB Partner Insurance Advisor helping families and businesses with trusted insurance solutions. Get the best plans for health, life, travel, motor and commercial insurance.
+</p>
+
+<div class="hero-buttons">
+<a href="tel:8866109533" class="btn">Call Now</a>
+<a href="https://wa.me/918866109533" class="btn btn2">WhatsApp</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="https://i.ibb.co/Mk3J8qCY/raj.jpg" alt="Raj Shiroya">
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="about-container">
+
+<div class="about-text">
+<h2>About Raj Shiroya</h2>
+
+<p>
+Hello! I am Raj Shiroya, a dedicated PB Partner Insurance Advisor. I help people choose the right insurance plans according to their needs and budget. My mission is to provide trusted guidance and complete support for your financial safety and future protection.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="services">
+
+<h2 class="section-title">Insurance Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🚗</div>
+<h3>Motor Insurance</h3>
+<p>Protect your car and bike with reliable insurance coverage and instant claim support.</p>
+</div>
+
+<div class="card">
+<div class="icon">❤️</div>
+<h3>Life Insurance</h3>
+<p>Secure your family’s future with trusted life insurance and term plans.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏥</div>
+<h3>Health Insurance</h3>
+<p>Get affordable health coverage with cashless hospitals and medical benefits.</p>
+</div>
+
+<div class="card">
+<div class="icon">✈️</div>
+<h3>Travel Insurance</h3>
+<p>Travel stress-free with complete domestic and international travel protection.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Home Insurance</h3>
+<p>Protect your home and valuable assets against unexpected damage and risks.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚚</div>
+<h3>Commercial Vehicle</h3>
+<p>Insurance solutions for trucks, taxis and commercial vehicles with full support.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="why">
+
+<h2 class="section-title">Why Choose Me?</h2>
+
+<div class="why-container">
+
+<div class="why-box">
+<h3>Trusted Advisor</h3>
+<p>Professional support and honest guidance for every insurance plan.</p>
+</div>
+
+<div class="why-box">
+<h3>Quick Assistance</h3>
+<p>Fast response on WhatsApp and complete help during claim process.</p>
+</div>
+
+<div class="why-box">
+<h3>Affordable Plans</h3>
+<p>Best insurance plans according to your budget and needs.</p>
+</div>
+
+<div class="why-box">
+<h3>Customer Satisfaction</h3>
+<p>Focused on building long-term trust and excellent customer service.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Raj Shiroya</h2>
+
+<p>
+Call or WhatsApp now for the best insurance plans and expert guidance.
+</p>
+
+<div class="contact-buttons">
+<a href="tel:8866109533" class="btn">📞 Call 8866109533</a>
+<a href="https://wa.me/918866109533" class="btn">💬 WhatsApp Now</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Raj Shiroya | PB Partner Insurance Advisor
+</footer>
+
+<a href="https://wa.me/918866109533" class="whatsapp">💬</a>
+
+</body>
+</html>
+
